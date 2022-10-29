@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+	background-color: #000000f2;
+    overflow: hidden;
+}
+i{
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+.header-nav{
+    width: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	height: 100vh;
+    background-color: #f8f6f6;
+    z-index: 9999999;
+    transition: all 0.6s ease;
+}
+.header-nav .header-toggle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.header-nav .header-logo img{
+    height: 48px;
+}
+.header-nav .header-toggle i{
+  font-size: 25px;
+}
+.header-nav .header-social{
+	bottom: 20px;
+	z-index: 11;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+.header-nav .header-social >div{
+    padding-top: 10px;
+}
+.navbar-item li{
+  list-style: none;
+}
+.navbar-item a{
+  text-decoration: none;
+}
+.navbar-menu{
+	width: 250px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	z-index: 555555555;
+	background-color: #000;
+	transform: translateX(-100%);
+	transition: all 0.6s ease;
+}
+.navbar-menu .navbar-item ul{
+    padding-left: 30px;
+	height: 300px;
+	overflow: hidden;
+}
+.navbar-menu .navbar-item li{
+    padding-top: 500px;
+	opacity: 0;
+}
+.navbar-menu .navbar-item ul li a{
+    color: #f9f6f6;
+	font-weight: 500;
+	font-size: 16px;
+}
+.navbar-icons{
+    position: absolute;
+	bottom: 50px;
+	left: 20px;
+}
+.navbar-icons a{
+    color: inherit;
+	padding-left: 15px;
+	font-size:14px;
+}
+.navbar-icons span{
+    color: #999;
+}
+.open-nav
+{
+	transform: scale(1) ;
+}
+.close-nav
+{
+	transform: translateX(-100%);
+}
+.close-search
+{
+	transform: translateX(100%);
+}
+.post{
+    position: relative;
+    overflow: hidden;
+}
+.info{
+    position: absolute;
+    top: 150%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.626);
+    display: flex;
+    align-items: center;
+    transition: top 1s;
+}
+.post:hover .info{
+    top: 0;
+}
+
+.form-control
+{
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid rgba(255,255,255,.7);
+	border-radius: 0;
+	color: #fff;
+	font-weight: 800;
+}
+.form-control:focus
+{
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid rgba(255,255,255,.7);
+	border-radius: 0;
+}
+::placeholder
+{
+	font-weight: 400;
+	font-size: 17px;
+	text-align: center;
+
+}
+.search{
+    display: none;
+    text-align: center;
+}
+
+#categories-section{
+    display: none; 
+}
+#areaSection{
+    display: none;
+}
+.rowFixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5555555;
+    padding: 0 15%;
+    background-color: #000000f2;
+}
+.post2{
+    position: relative;
+    overflow: hidden;
+}
+.info2{
+    position: absolute;
+    top: 150%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius:0;
+    background-color: rgba(255, 255, 255, 0.626);
+    transition: top 1s;
+}
+.post2:hover .info2{
+    top: 0;
+}
+.movie{
+    cursor: pointer;
+}
+.fa-city{
+    color: #e65a50ab;
+}
+#contactSection input{
+    box-shadow:0 .5rem 1rem rgba(255,255,255,.1);
+}
+#contactSection{
+    display: none;
+}
+#ingredientSection{
+    display: none;
+}
+#ingredientSection .row i{
+    color: #9ee650ab;
+}
+#mealDetails{
+    display: none;
+}
+#mealAreaDetails{
+    display: none;
+}
+#mealIngradient{
+    display: none;
+}
+.youtube{
+    background-color : #F70000;
+}
+.youtube:hover{
+    background-color : #F70000;
+    border-color: #F70000;
+}
+
+#rowData .d-flex{
+	flex-wrap: wrap;
+}
+#rowData  ul{
+    padding: 0;
+}
+#rowData .recipeColor{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+#rowData .recipeTag{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+#rowData .source{
+    background-color: #28a745;
+    border-color: #28a745;
+}
+#rowData .source:hover{
+    background-color: #288b3f;
+    border-color: #288b3f;
+}
+.loading-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 99999999999999;
+}
+.fixed-nav{
+    width: 75%;
+    position: fixed;
+    height: 30px;
+    top: 0;
+    left: 12.5%;
+    right: 0;
+    z-index: 999999;
+    background-color: rgb(13, 13, 13);
+}
+.sm-loading{
+	z-index: 999;
+	inset: 0;
+	background-color: #0D0D0D;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	height: 100vh;
+}
+.loading-container{
+	display: none;
+}

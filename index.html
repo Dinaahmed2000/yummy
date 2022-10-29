@@ -1,0 +1,201 @@
+<html>
+<head>
+    <title>Yummy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>  
+    <div class="loading-screen d-flex justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+    </div>
+    <div class="fixed-nav"></div>
+    <section>
+        <div class="header-nav">
+            <div class="header-logo py-4">
+                <img src="images/logo.png" alt="" >
+            </div>
+            <div class="header-toggle">
+                <i class="fa-solid fa-align-justify"></i>
+            </div>
+            <div class="header-social">
+                <div class="icon1">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="icon2">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-item">
+                <ul>
+                    <li class="item1"><a href="#" id="search" data-list="search" class="navbar-category">Search</a></li>
+                    <li class="item2"><a href="#" id="categories" data-list="categories" class="navbar-category">Categories</a></li>
+                    <li class="item3"><a href="#" id="area" data-list="a" class="navbar-category">Area</a></li>
+                    <li class="item4"><a href="#" id="ingredients" data-list="i" class="navbar-category">Ingredients</a></li>
+                    <li class="item5"><a href="#" id="contact" data-list="contact" class="navbar-category">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="navbar-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-solid fa-globe"></i></a>
+                <div class="pt-3">
+					<span>Copyright Â© 2019 All Rights Reserved.</span>
+				</div>
+            </div>
+        </div>
+    </section>
+    <section id="home">
+        <div class="container py-5 w-75">
+            <div class="d-flex justify-content-center align-items-center">
+            <div class="row py-5" id="firstMeal">
+
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="search">
+        <div class="container w-75 pt-4 position-relative">
+        <div class="loading-container">
+            <div class="sm-loading position-absolute ">
+                <i class="fa fa-spinner fa-spin fa-4x"></i>
+            </div>
+        </div>
+            <div class="row pt-4 rowFixed">
+                <div class="col-md-6">
+                    <input id="searchName" class="form-control mb-2 " placeholder="Search By Name">
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control " type="text" maxlength="1" id="searchLetter" placeholder="search By First Letter...">
+                </div>
+            </div>
+            <div class="row py-5 mt-5" id="filteredData">
+
+            </div>
+        </div>
+    </section>
+    <section id="categories-section">
+        <div class="container py-5 w-75 position-relative">
+            <div class="loading-container">
+                <div class="sm-loading position-absolute ">
+                    <i class="fa fa-spinner fa-spin fa-4x"></i>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+            <div class="row py-5 mt-4" id="categoryMeal">
+
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="areaSection">
+        <div class="container py-5 w-75 position-relative">
+            <div class="loading-container">
+                <div class="sm-loading position-absolute ">
+                    <i class="fa fa-spinner fa-spin fa-4x"></i>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+            <div class="row py-5 mt-4" id="areas">
+
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="ingredientSection">
+        <div class="container pt-5 pb-3 w-75 position-relative">
+            <div class="loading-container">
+                <div class="sm-loading position-absolute ">
+                    <i class="fa fa-spinner fa-spin fa-4x"></i>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+            <div class="row py-5 mt-4" id="IngredientsInfo">
+               
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="contactSection">
+        <div class="vh-100 d-flex align-items-center"><div class="container text-center w-50"><div class="">
+            <h2 class="text-white">ContacUs...</h2>
+            <div class="row pt-4">
+                <div class="col-md-6">
+                <div class=" my-3">
+                    <input onkeyup="validation()" id="userName" type="text" class="form-control" placeholder="Enter Your Name">
+                    <div class="alert mt-1 alert-danger d-none" id="namealert" role="alert">Special Characters and Numbers not allowed</div>
+                    </div>
+                    <div  class=" my-3">
+                    <input onkeyup="validation()" id="userPhone" type="tel" class="form-control" placeholder="Enter Phone">
+                    <div class="alert mt-1 alert-danger  d-none" id="phonealert" role="alert">Enter valid Phone Number</div>
+                    </div>
+                    <div class=" my-3">
+                    <input onkeyup="validation()" id="userPassword" type="password" class="form-control" placeholder="Enter Password">
+                    <div class="alert mt-1 alert-danger  d-none" id="passwordalert" role="alert">Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                   <div class=" my-3">
+                     <input onkeyup="validation()" id="userEmail" type="email" class="form-control" placeholder="Enter Email">
+                     <div class="alert mt-1 alert-danger  d-none" id="emailalert" role="alert">Enter valid email. *Ex: xxx@yyy.zzz</div>
+                    </div> 
+                    <div class=" my-3">
+                    <input onkeyup="validation()" id="userAge" class="form-control" placeholder="Enter Age">
+                    <div class="alert mt-1 alert-danger d-none" id="agealert" role="alert">Enter valid Age</div>
+                    </div> 
+                    <div class=" my-3">
+                    <input onkeyup="validation()" id="userRepass" type="password" class="form-control" placeholder="Enter RePassword">
+                    <div class="alert mt-1 alert-danger d-none" id="repasswordalert" role="alert">Enter valid Repassword</div>
+                    </div> 
+                </div>
+            </div>
+            <button type="submit" disabled="" id="submitBtn" class="btn btn-outline-danger">Submit</button>
+        </div></div>
+    </section>
+    <section id="mealDetails">
+        <div class="container w-75 my-1 py-2 my-5 position-relative ">
+			<div class="loading-container">
+				<div class="sm-loading position-absolute ">
+					<i class="fa fa-spinner fa-spin fa-4x"></i>
+				</div>
+			</div>
+
+
+			<div class="row mt-3 p-2" id="rowData">
+			</div>
+
+        </div>
+    </section>
+    <section id="mealAreaDetails">
+        <div class="container w-75 my-1 py-2 mt-5 position-relative">
+            <div class="loading-container">
+				<div class="sm-loading position-absolute ">
+					<i class="fa fa-spinner fa-spin fa-4x"></i>
+				</div>
+			</div>
+
+			<div class="row my-5 p-2" id="areaData">
+			</div>
+
+        </div>
+    </section>
+    <section id="mealIngradient">
+        <div class="container w-75 my-1 py-2 mt-5 position-relative">
+            <div class="loading-container">
+				<div class="sm-loading position-absolute ">
+					<i class="fa fa-spinner fa-spin fa-4x"></i>
+				</div>
+			</div>
+			<div class="row my-5 p-2" id="ingredientDetails">
+			</div>
+        </div>
+    </section>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
